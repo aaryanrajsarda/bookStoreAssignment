@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Store</title>
+    <link
+      rel="stylesheet"
+      href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./node_modules/bootstrap-social/bootstrap-social.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./node_modules/font-awesome/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-dark navbar-expand-sm">
+      <div class="container">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#Navbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#"
+          ><img src="./images/book-store-logo.jpg" height="80" width="80"
+        /></a>
+        <div class="collapse navbar-collapse" id="Navbar">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#"
+                ><span class="fa fa-home fa-lg"></span> Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./aboutus.html"
+                ><span class="fa fa-info fa-lg"></span> About</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./catalogue.html"
+                ><span class="fa fa-book fa-lg"></span> Catalogue</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./cart.html"
+                ><span class="fa fa-shopping-cart fa-lg"></span> Cart</a
+              >
+            </li>
+          </ul>
+          <span class="navbar-text">
+            <a id="login"> <span class="fa fa-sign-in"></span> Login </a>
+          </span>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container bookstore-img">
+      <div class="row row-content">
+        <div class="col-12 col-md-10 offset-md-1">
+          <div id="mycarousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner" role="listbox">
+              <div class="carousel-item active">
+                <img
+                  class="d-block d-md-inline img-fluid mx-auto mx-md-0 carousel-image"
+                  src="./images/animalfarm.jpg"
+                  alt="Animal Farm"
+                />
+                <img
+                  class="d-none d-md-inline img-fluid float-right mx-md-0 carousel-image"
+                  src="./images/GeorgeOrwell.jpg"
+                  alt="George Orwell"
+                />
+                
+                <div class="carousel-caption d-none d-md-block">
+                  <h2>
+                    Animal Farm
+                    <span class="badge badge-pill badge-secondary">Rs. 199</span>
+                  </h2>
+                  <h4>George Orwell</h4>
+                  <q class="d-none d-sm-block">
+                    All animals are equal, but some animals are more equal than
+                    others.
+                  </q>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img
+                  class="d-block d-md-inline img-fluid mx-auto mx-md-0 carousel-image"
+                  src="./images/fahrenheit451.jpg"
+                  alt="Fahrenheit 451"
+                />
+                <img
+                  class="d-none d-md-inline img-fluid float-right mx-md-0 carousel-image"
+                  src="./images/RayBradbury.jpg"
+                  alt="Ray Bradbury"
+                />
+                <div class="carousel-caption d-none d-md-block">
+                  <h2>
+                    Fahrenheit 451
+                    <span class="badge badge-danger">NEW</span>
+                  </h2>
+                  <h4>Ray Bradbury</h4>
+                  <q class="d-none d-sm-block">
+                    It was a pleasure to burn.
+                  </q>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img
+                  class="d-block d-md-inline img-fluid mx-auto mx-md-0 carousel-image"
+                  src="./images/Catch22.jpg"
+                  alt="Catch 22"
+                />
+                <img
+                  class="d-none d-md-inline img-fluid float-right mx-md-0 carousel-image"
+                  src="./images/JosephHeller.jpg"
+                  alt="Joseph Heller"
+                />
+                <div class="carousel-caption d-none d-md-block">
+                  <h2>Catch 22</h2>
+                  <h4>Joseph Heller</h4>
+                  <q class="d-none d-sm-block">
+                    ...Anything worth dying for ... is certainly worth living
+                    for.
+                  </q>
+                </div>
+              </div>
+            </div>
+            <ol class="carousel-indicators">
+              <li
+                data-target="#mycarousel"
+                data-slide-to="0"
+                class="active"
+              ></li>
+              <li data-target="#mycarousel" data-slide-to="1"></li>
+              <li data-target="#mycarousel" data-slide-to="2"></li>
+            </ol>
+            <a
+              class="carousel-control-prev"
+              href="#mycarousel"
+              role="button"
+              data-slide="prev"
+            >
+              <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a
+              class="carousel-control-next"
+              href="#mycarousel"
+              role="button"
+              data-slide="next"
+            >
+              <span class="carousel-control-next-icon"></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row pt-2 ">
+        <div class="col-12">
+          <h1>Editor's Choice</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 featured-books">
+          <ul>
+            <li>
+              <div class="row">
+                <div class="col-12 col-md-2">
+                  <img src="./images/ToKillAMockingBird.jpg" alt="To Kill A Mocking Bird" class="img-thumbnail img-fluid"/>
+                  <span>To Kill A Mocking Bird</span>
+                  <span>Harper Lee</span>
+                  <span><i class="fa fa-plus-circle fa-lg add-to-cart"></i></span>
+                </div>
+              </div>
+            </li>
+          <li>
+            <div class="row">
+              <div class="col-12 col-md-2">
+                <img src="./images/ToKillAMockingBird.jpg" alt="To Kill A Mocking Bird" class="img-thumbnail img-fluid"/>
+                <span>To Kill A Mocking Bird</span>
+                <span>Harper Lee</span>
+                <span><i class="fa fa-plus-circle fa-lg add-to-cart"></i></span>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="row">
+              <div class="col-12 col-md-2">
+                <img src="./images/ToKillAMockingBird.jpg" alt="To Kill A Mocking Bird" class="img-thumbnail img-fluid"/>
+                <span>To Kill A Mocking Bird</span>
+                <span>Harper Lee</span>
+                <span><i class="fa fa-plus-circle fa-lg add-to-cart"></i></span>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="row">
+              <div class="col-12 col-md-2">
+                <img src="./images/ToKillAMockingBird.jpg" alt="To Kill A Mocking Bird" class="img-thumbnail img-fluid"/>
+                <span>To Kill A Mocking Bird</span>
+                <span>Harper Lee</span>
+                <span><i class="fa fa-plus-circle fa-lg add-to-cart"></i></span>
+              </div>
+            </div>
+          </li>
+        </ul>
+        </div>
+      </div>
+    </div>
+
+    <footer class="pt-4">
+      <div class="container">
+          <div class="row">             
+              <div class="col-4 offset-1 col-sm-2">
+                  <h5>Links</h5>
+                  <ul class="list-unstyled">
+                      <li><a href="#">Home</a></li>
+                      <li><a href="./aboutus.html">About</a></li>
+                      <li><a href="./catalogue.html">Catalogue</a></li>
+                      <li><a href="./cart.html">Cart</a></li>
+                  </ul>
+              </div>
+              <div class="col-7 col-sm-5">
+                  <h5>Our Address</h5>
+                  <address>
+                LD-189, Kohat Enclave<br>
+                Pitampura, Delhi<br>
+                India<br>
+                <i class="fa fa-phone fa-lg"></i>: 011-27556898<br>
+                <i class="fa fa-fax fa-lg"></i>: 011-27556898<br>
+                <i class="fa fa-envelope fa-lg"></i>: <a href="mailto:books@store.net">books@store.net</a>
+             </address>
+              </div>
+              <div class="col-12 col-sm-4 align-self-center"><!--centers the content of only this column-->
+                  <div class="text-center">
+                      <a class ="btn btn-social-icon btn-google" href="http://google.com/+"><i class="fa fa-google-plus fa-lg"></i></a>
+                      <a class ="btn btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id="><i class="fa fa-facebook fa-lg"></i></a>
+                      <a class ="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/"><i class="fa fa-linkedin fa-lg"></i></a>
+                      <a class ="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter fa-lg"></i></a>
+                      <a class ="btn btn-social-icon btn-youtube" href="http://youtube.com/"><i class="fa fa-youtube fa-lg"></i></a>
+                      <a class ="btn btn-social-icon" href="mailto:"><i class="fa fa-envelope fa-lg"></i></a>
+                  </div>
+              </div>
+         </div>
+         <div class="row justify-content-center"> <!--"horizontally" aligns content in center-->            
+              <div class="col-auto">
+                  <p>© Book Store</p>
+              </div>
+         </div>
+      </div>
+  </footer>
+
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./node_modules/popper.js/dist/popper.min.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  </body>
+</html>

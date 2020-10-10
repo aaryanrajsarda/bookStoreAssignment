@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar-dark {
+  background-color: #512da8;
+  margin-top: -3.2rem;
+  min-width: 100vw;
+}
+
+body {
+  padding: 50px 0px 0px 0px;
+}
+
+#login {
+  cursor: pointer;
+}
+
+.navbar-brand img {
+  border-radius: 50%;
+}
+
+.row-header {
+  margin: 0px auto;
+  padding: 0px auto;
+}
+
+.row-content {
+  margin: 0px;
+  padding: 50px 0px 50px 0px;
+}
+
+.jumbotron {
+  padding: 70px 30px;
+  margin: 0px auto;
+  background: #9575cd;
+  color: floralwhite;
+}
+
+.bookstore-img {
+  min-width: 100vw;
+  min-height: 90vh;
+  background-image: url("./images/book-store.jpg");
+  background-size: cover;
+  opacity: 0.8;
+}
+
+.carousel-image {
+  height: 50vh;
+  width: auto;
+}
+
+h2,
+h4,
+q {
+  color: black;
+  font-weight: bolder;
+}
+
+#mycarousel {
+  background-color: whitesmoke;
+  opacity: 0.9;
+}
+
+.carousel-caption {
+  top: 50%;
+  transform: translateY(-50%);
+  bottom: initial;
+}
+
+li {
+  list-style: none;
+}
