@@ -14,9 +14,10 @@
     />
     <link
       rel="stylesheet"
-      href="./node_modules/font-awesome/css/font-awesome.min.css"
+      href="node_modules/font-awesome/css/font-awesome.min.css"
     />
     <link rel="stylesheet" href="./styles.css" />
+    <script defer src="https://friconix.com/cdn/friconix.js"></script>
   </head>
   <body>
     <nav class="navbar navbar-dark navbar-expand-sm">
@@ -56,11 +57,73 @@
             </li>
           </ul>
           <span class="navbar-text">
-            <a id="login"> <span class="fa fa-sign-in"></span> Login </a>
+            <a id="login" data-toggle="modal" data-target="#loginModal">
+              <span class="fa fa-sign-in"></span>
+              Login
+            </a>
           </span>
         </div>
       </div>
     </nav>
+
+    <div id="loginModal" class="modal fade" role="dialog">
+      <div class="modal-dialog modal-lg" role="content">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Login</h4>
+            <button type="button" class="close" data-dismiss="modal">
+              &times;
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-row">
+                <div class="form-group col-sm-4">
+                  <label class="sr-only" for="exampleInputEmail3">
+                    Email address</label
+                  >
+                  <input
+                    type="email"
+                    class="form-control form-control-sm mr-1"
+                    id="exampleInputEmail3"
+                    placeholder="Enter email"
+                  />
+                </div>
+                <div class="form-group col-sm-4">
+                  <label class="sr-only" for="exampleInputPassword3"
+                    >Password</label
+                  >
+                  <input
+                    type="password"
+                    class="form-control form-control-sm mr-1"
+                    id="exampleInputPassword3"
+                    placeholder="Password"
+                  />
+                </div>
+                <div class="col-sm-auto">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" />
+                    <label class="form-check-label"> Remember me </label>
+                  </div>
+                </div>
+              </div>
+              <div class="form-row">
+                <button
+                  type="button"
+                  class="btn btn-secondary btn-sm ml-auto"
+                  data-dismiss="modal"
+                >
+                  Cancel
+                </button>
+                <button type="submit" class="btn btn-primary btn-sm ml-1">
+                  Sign in
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <div class="container bookstore-img">
       <div class="row row-content">
@@ -78,11 +141,13 @@
                   src="./images/GeorgeOrwell.jpg"
                   alt="George Orwell"
                 />
-                
+
                 <div class="carousel-caption d-none d-md-block">
                   <h2>
                     Animal Farm
-                    <span class="badge badge-pill badge-secondary">Rs. 199</span>
+                    <span class="badge badge-pill badge-secondary"
+                      >Rs. 199</span
+                    >
                   </h2>
                   <h4>George Orwell</h4>
                   <q class="d-none d-sm-block">
@@ -108,9 +173,7 @@
                     <span class="badge badge-danger">NEW</span>
                   </h2>
                   <h4>Ray Bradbury</h4>
-                  <q class="d-none d-sm-block">
-                    It was a pleasure to burn.
-                  </q>
+                  <q class="d-none d-sm-block"> It was a pleasure to burn. </q>
                 </div>
               </div>
               <div class="carousel-item">
@@ -165,100 +228,306 @@
     </div>
 
     <div class="container">
-      <div class="row pt-2 ">
+      <div class="row pt-2 pb-2">
         <div class="col-12">
-          <h1>Editor's Choice</h1>
+          <h1>Fresh Arrivals</h1>
         </div>
       </div>
-      <div class="row">
-        <div class="col-12 featured-books">
-          <ul>
-            <li>
-              <div class="row">
-                <div class="col-12 col-md-2">
-                  <img src="./images/ToKillAMockingBird.jpg" alt="To Kill A Mocking Bird" class="img-thumbnail img-fluid"/>
-                  <span>To Kill A Mocking Bird</span>
-                  <span>Harper Lee</span>
-                  <span><i class="fa fa-plus-circle fa-lg add-to-cart"></i></span>
-                </div>
-              </div>
-            </li>
-          <li>
-            <div class="row">
-              <div class="col-12 col-md-2">
-                <img src="./images/ToKillAMockingBird.jpg" alt="To Kill A Mocking Bird" class="img-thumbnail img-fluid"/>
-                <span>To Kill A Mocking Bird</span>
-                <span>Harper Lee</span>
-                <span><i class="fa fa-plus-circle fa-lg add-to-cart"></i></span>
-              </div>
+      <div>
+        <ul class="row align-items-center">
+          <li class="col-6 col-md-2 fresh-arrival-div">
+            <div class="fresh-arrival-img-div">
+              <img
+                src="./images/ToKillAMockingBird.jpg"
+                alt="To Kill A Mocking Bird"
+                class="img-thumbnail img-fluid"
+              />
+            </div>
+            <div class="fresh-arrival-details">
+              <span class="font-weight-bold">To Kill A Mocking Bird</span><br />
+              <span>Harper Lee</span><br />
+              <span class="text-success font-weight-bold">Rs. 500</span>
+              <span
+                ><i class="fa fa-plus-circle fa-lg add-to-cart float-right"></i
+              ></span>
             </div>
           </li>
-          <li>
-            <div class="row">
-              <div class="col-12 col-md-2">
-                <img src="./images/ToKillAMockingBird.jpg" alt="To Kill A Mocking Bird" class="img-thumbnail img-fluid"/>
-                <span>To Kill A Mocking Bird</span>
-                <span>Harper Lee</span>
-                <span><i class="fa fa-plus-circle fa-lg add-to-cart"></i></span>
-              </div>
+          <li class="col-6 col-md-2 fresh-arrival-div">
+            <div class="fresh-arrival-img-div">
+              <img
+                src="./images/fahrenheit451.jpg"
+                alt="Fahrenheit 451"
+                class="img-thumbnail img-fluid"
+              />
+            </div>
+            <div class="fresh-arrival-details">
+              <span class="font-weight-bold">Fahrenheit 451</span><br />
+              <span>Ray Bradbury</span><br />
+              <span class="text-success font-weight-bold">Rs. 350</span>
+              <span
+                ><i class="fa fa-plus-circle fa-lg add-to-cart float-right"></i
+              ></span>
             </div>
           </li>
-          <li>
-            <div class="row">
-              <div class="col-12 col-md-2">
-                <img src="./images/ToKillAMockingBird.jpg" alt="To Kill A Mocking Bird" class="img-thumbnail img-fluid"/>
-                <span>To Kill A Mocking Bird</span>
-                <span>Harper Lee</span>
-                <span><i class="fa fa-plus-circle fa-lg add-to-cart"></i></span>
-              </div>
+          <li class="col-6 col-md-2 fresh-arrival-div">
+            <div class="fresh-arrival-img-div">
+              <img
+                src="./images/TheInstitute.jpg"
+                alt="The Institute"
+                class="img-thumbnail img-fluid"
+              />
+            </div>
+            <div class="fresh-arrival-details">
+              <span class="font-weight-bold">The Institute</span><br />
+              <span>Stephen King</span><br />
+              <span class="text-success font-weight-bold">Rs. 650</span>
+              <span
+                ><i class="fa fa-plus-circle fa-lg add-to-cart float-right"></i
+              ></span>
+            </div>
+          </li>
+          <li class="col-6 col-md-2 fresh-arrival-div">
+            <div class="fresh-arrival-img-div">
+              <img
+                src="./images/Killing Commendatore.jpg"
+                alt="Killing Commendatore"
+                class="img-thumbnail img-fluid"
+              />
+            </div>
+            <div class="fresh-arrival-details">
+              <span class="font-weight-bold">Killing Commendatore</span><br />
+              <span>Haruki Murakami</span><br />
+              <span class="text-success font-weight-bold">Rs. 850</span>
+              <span
+                ><i class="fa fa-plus-circle fa-lg add-to-cart float-right"></i
+              ></span>
+            </div>
+          </li>
+          <li class="col-6 col-md-2 fresh-arrival-div">
+            <div class="fresh-arrival-img-div">
+              <img
+                src="./images/Suheldev.jpg"
+                alt="Suheldev"
+                class="img-thumbnail img-fluid"
+              />
+            </div>
+            <div class="fresh-arrival-details">
+              <span class="font-weight-bold"
+                >Suheldev: The King Who Saved India</span
+              ><br />
+              <span>Amish Tripathi</span><br />
+              <span class="text-success font-weight-bold">Rs. 300</span>
+              <span
+                ><i class="fa fa-plus-circle fa-lg add-to-cart float-right"></i
+              ></span>
+            </div>
+          </li>
+          <li class="col-6 col-md-2 fresh-arrival-div">
+            <div class="fresh-arrival-img-div">
+              <img
+                src="./images/TroubledBlood.jpg"
+                alt="Troubled Blood"
+                class="img-thumbnail img-fluid"
+              />
+            </div>
+            <div class="fresh-arrival-details">
+              <span class="font-weight-bold">Troubled Blood</span><br />
+              <span>J K Rowling</span><br />
+              <span class="text-success font-weight-bold">Rs. 900</span>
+              <span
+                ><i class="fa fa-plus-circle fa-lg float-right add-to-cart"></i
+              ></span>
             </div>
           </li>
         </ul>
+      </div>
+
+      <hr />
+      <div class="row pb-3">
+        <div class="col-12">
+          <h1>Search by Authors</h1>
         </div>
       </div>
+      <div>
+        <ul class="row align-items-center">
+          <li class="col-6 col-md-2 author-div-list-item">
+            <div class="author-img-div">
+              <img
+                src="./images/GeorgeOrwell.jpg"
+                alt="George Orwell"
+                class="img-fluid"
+              />
+            </div>
+            <span>George Orwell</span>
+          </li>
+          <li class="col-6 col-md-2 author-div-list-item">
+            <div class="author-img-div">
+              <img
+                src="./images/NeilGaiman.jpg"
+                alt="Neil Gaiman"
+                class="img-fluid"
+              />
+            </div>
+            <span>Neil Gaiman</span>
+          </li>
+          <li class="col-6 col-md-2 author-div-list-item">
+            <div class="author-img-div">
+              <img
+                src="./images/SalmanRushdie.jpg"
+                alt="Salman Rushdie"
+                class="img-fluid"
+              />
+            </div>
+            <span>Salman Rushdie</span>
+          </li>
+          <li class="col-6 col-md-2 author-div-list-item">
+            <div class="author-img-div">
+              <img
+                src="./images/CharlesDickens.jpg"
+                alt="Charles Dickens"
+                class="img-fluid"
+              />
+            </div>
+            <span>Charles Dickens</span>
+          </li>
+          <li class="col-6 col-md-2 author-div-list-item">
+            <div class="author-img-div">
+              <img
+                src="./images/JKRowling.jpg"
+                alt="J K Rowling"
+                class="img-fluid"
+              />
+            </div>
+            <span>J K Rowling</span>
+          </li>
+          <li class="col-6 col-md-2 author-div-list-item">
+            <div class="author-img-div">
+              <img
+                src="./images/Amish Tripathi.jpg"
+                alt="Amish Tripathi"
+                class="img-fluid"
+              />
+            </div>
+            <span>Amish Tripathi</span>
+          </li>
+        </ul>
+      </div>
+
+      <hr />
+      <div class="row">
+        <div class="col-12">
+          <h1>Search by Genre</h1>
+        </div>
+      </div>
+      <div>
+        <ul class="row align-items-center">
+          <li class="col-6 col-md-2 emoji-list-item">
+            <div class="emoji-div">
+              <i class="fa fa-smile-o fa-5x"></i>
+            </div>
+            <span>Comedy</span>
+          </li>
+          <li class="col-6 col-md-2 emoji-list-item">
+            <div class="emoji-div">
+              <i class="fa fa-heart fa-5x"></i>
+            </div>
+            <span>Romance</span>
+          </li>
+          <li class="col-6 col-md-2 emoji-list-item">
+            <div class="emoji-div">
+              <i class="fa fa-frown-o fa-5x"></i>
+            </div>
+            <span>Tragedy</span>
+          </li>
+          <li class="col-6 col-md-2 emoji-list-item">
+            <div class="emoji-div">
+              <i class="fi-xnlux7-robot" style="margin-top: -1rem"></i>
+            </div>
+            <span style="margin-top: -1rem">Sci-Fi</span>
+          </li>
+          <li class="col-6 col-md-2 emoji-list-item">
+            <div class="emoji-div">
+              <i class="fa fa-bomb fa-5x"></i>
+            </div>
+            <span>Crime</span>
+          </li>
+          <li class="col-6 col-md-2 emoji-list-item">
+            <div class="emoji-div">
+              <i class="fa fa-fighter-jet fa-5x"></i>
+            </div>
+            <span>War</span>
+          </li>
+        </ul>
+      </div>
+      <hr />
     </div>
 
     <footer class="pt-4">
       <div class="container">
-          <div class="row">             
-              <div class="col-4 offset-1 col-sm-2">
-                  <h5>Links</h5>
-                  <ul class="list-unstyled">
-                      <li><a href="#">Home</a></li>
-                      <li><a href="./aboutus.html">About</a></li>
-                      <li><a href="./catalogue.html">Catalogue</a></li>
-                      <li><a href="./cart.html">Cart</a></li>
-                  </ul>
-              </div>
-              <div class="col-7 col-sm-5">
-                  <h5>Our Address</h5>
-                  <address>
-                LD-189, Kohat Enclave<br>
-                Pitampura, Delhi<br>
-                India<br>
-                <i class="fa fa-phone fa-lg"></i>: 011-27556898<br>
-                <i class="fa fa-fax fa-lg"></i>: 011-27556898<br>
-                <i class="fa fa-envelope fa-lg"></i>: <a href="mailto:books@store.net">books@store.net</a>
-             </address>
-              </div>
-              <div class="col-12 col-sm-4 align-self-center"><!--centers the content of only this column-->
-                  <div class="text-center">
-                      <a class ="btn btn-social-icon btn-google" href="http://google.com/+"><i class="fa fa-google-plus fa-lg"></i></a>
-                      <a class ="btn btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id="><i class="fa fa-facebook fa-lg"></i></a>
-                      <a class ="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/"><i class="fa fa-linkedin fa-lg"></i></a>
-                      <a class ="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter fa-lg"></i></a>
-                      <a class ="btn btn-social-icon btn-youtube" href="http://youtube.com/"><i class="fa fa-youtube fa-lg"></i></a>
-                      <a class ="btn btn-social-icon" href="mailto:"><i class="fa fa-envelope fa-lg"></i></a>
-                  </div>
-              </div>
-         </div>
-         <div class="row justify-content-center"> <!--"horizontally" aligns content in center-->            
-              <div class="col-auto">
-                  <p>© Book Store</p>
-              </div>
-         </div>
+        <div class="row">
+          <div class="col-4 offset-1 col-sm-2">
+            <h5>Links</h5>
+            <ul class="list-unstyled">
+              <li><a href="#">Home</a></li>
+              <li><a href="./aboutus.html">About</a></li>
+              <li><a href="./catalogue.html">Catalogue</a></li>
+              <li><a href="./cart.html">Cart</a></li>
+            </ul>
+          </div>
+          <div class="col-7 col-sm-5">
+            <h5>Our Address</h5>
+            <address>
+              LD-189, Kohat Enclave<br />
+              Pitampura, Delhi<br />
+              India<br />
+              <i class="fa fa-phone fa-lg"></i>: 011-27556898<br />
+              <i class="fa fa-fax fa-lg"></i>: 011-27556898<br />
+              <i class="fa fa-envelope fa-lg"></i>:
+              <a href="mailto:books@store.net">books@store.net</a>
+            </address>
+          </div>
+          <div class="col-12 col-sm-4 align-self-center">
+            <!--centers the content of only this column-->
+            <div class="text-center">
+              <a
+                class="btn btn-social-icon btn-google"
+                href="http://google.com/+"
+                ><i class="fa fa-google-plus fa-lg"></i
+              ></a>
+              <a
+                class="btn btn-social-icon btn-facebook"
+                href="http://www.facebook.com/profile.php?id="
+                ><i class="fa fa-facebook fa-lg"></i
+              ></a>
+              <a
+                class="btn btn-social-icon btn-linkedin"
+                href="http://www.linkedin.com/in/"
+                ><i class="fa fa-linkedin fa-lg"></i
+              ></a>
+              <a
+                class="btn btn-social-icon btn-twitter"
+                href="http://twitter.com/"
+                ><i class="fa fa-twitter fa-lg"></i
+              ></a>
+              <a
+                class="btn btn-social-icon btn-youtube"
+                href="http://youtube.com/"
+                ><i class="fa fa-youtube fa-lg"></i
+              ></a>
+              <a class="btn btn-social-icon" href="mailto:"
+                ><i class="fa fa-envelope fa-lg"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <!--"horizontally" aligns content in center-->
+          <div class="col-auto">
+            <p>© Book Store</p>
+          </div>
+        </div>
       </div>
-  </footer>
+    </footer>
 
     <script src="./node_modules/jquery/dist/jquery.min.js"></script>
     <script src="./node_modules/popper.js/dist/popper.min.js"></script>

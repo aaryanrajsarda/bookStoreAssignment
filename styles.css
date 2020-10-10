@@ -73,3 +73,32 @@ q {
 li {
   list-style: none;
 }
+
+.author-img-div {
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.author-img-div img {
+  height: 8.5rem;
+  width: 8.5rem;
+  border-radius: 50%;
+}
+
+.emoji-div {
+  display: grid;
+  place-items: center;
+  margin-bottom: 1rem;
+}
+
+.emoji-list-item {
+  display: grid;
+  place-items: center;
+}
+
+.author-div-list-item {
+  display: grid;
+  place-items: center;
+}
