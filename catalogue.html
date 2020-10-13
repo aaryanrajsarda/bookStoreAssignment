@@ -136,7 +136,7 @@
             <input
               type="text"
               class="form-control"
-              placeholder="Search Books"
+              placeholder="Search Books, Publishers, Genres"
               id="book-search"
             />
           </div>
@@ -148,7 +148,7 @@
       <div class="row">
         <ol class="col-12 breadcrumb">
           <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
-          <li class="breadcrumb-item active">Contact Us</li>
+          <li class="breadcrumb-item active current-page"></li>
         </ol>
       </div>
     </div>
@@ -156,7 +156,7 @@
     <div class="container">
       <div class="row pt-2 pb-2">
         <div class="col-12">
-          <h1>Catalogue</h1>
+          <h1 class="page-title">Catalogue</h1>
         </div>
       </div>
       <div class="books-container"></div>
@@ -240,6 +240,8 @@
       type="text/javascript"
       src="./node_modules/bootstrap/dist/js/bootstrap.min.js"
     ></script>
-    <script type="text/javascript" src="./books.js"></script>
+
+    <script src="./catalogue.js"></script>
+    <script src="./books.js"></script>
   </body>
 </html>

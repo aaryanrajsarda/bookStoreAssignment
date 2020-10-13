@@ -85,6 +85,7 @@ li {
   height: 8.5rem;
   width: 8.5rem;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .emoji-div {
@@ -101,4 +102,8 @@ li {
 .author-div-list-item {
   display: grid;
   place-items: center;
+}
+
+.emoji {
+  cursor: pointer;
 }

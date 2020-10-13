@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart</title>
+    <link
+      rel="stylesheet"
+      href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./node_modules/bootstrap-social/bootstrap-social.css"
+    />
+    <link
+      rel="stylesheet"
+      href="node_modules/font-awesome/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-dark navbar-expand-sm">
+      <div class="container">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#Navbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="./index.html"
+          ><img src="./images/book-store-logo.jpg" height="80" width="80"
+        /></a>
+        <div class="collapse navbar-collapse" id="Navbar">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="./index.html"
+                ><span class="fa fa-home fa-lg"></span> Home</a
+              >
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="./aboutus.html"
+                ><span class="fa fa-info fa-lg"></span> About</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./catalogue.html"
+                ><span class="fa fa-book fa-lg"></span> Catalogue</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./cart.html"
+                ><span class="fa fa-shopping-cart fa-lg"></span> Cart</a
+              >
+            </li>
+          </ul>
+          <span class="navbar-text">
+            <a id="login" data-toggle="modal" data-target="#loginModal">
+              <span class="fa fa-sign-in"></span>
+              Login
+            </a>
+          </span>
+        </div>
+      </div>
+    </nav>
+
+    <footer class="pt-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-4 offset-1 col-sm-2">
+            <h5>Links</h5>
+            <ul class="list-unstyled">
+              <li><a href="#">Home</a></li>
+              <li><a href="./aboutus.html">About</a></li>
+              <li><a href="./catalogue.html">Catalogue</a></li>
+              <li><a href="./cart.html">Cart</a></li>
+            </ul>
+          </div>
+          <div class="col-7 col-sm-5">
+            <h5>Our Address</h5>
+            <address>
+              LD-189, Kohat Enclave<br />
+              Pitampura, Delhi<br />
+              India<br />
+              <i class="fa fa-phone fa-lg"></i>: 011-27556898<br />
+              <i class="fa fa-fax fa-lg"></i>: 011-27556898<br />
+              <i class="fa fa-envelope fa-lg"></i>:
+              <a href="mailto:books@store.net">books@store.net</a>
+            </address>
+          </div>
+          <div class="col-12 col-sm-4 align-self-center">
+            <!--centers the content of only this column-->
+            <div class="text-center">
+              <a
+                class="btn btn-social-icon btn-google"
+                href="http://google.com/+"
+                ><i class="fa fa-google-plus fa-lg"></i
+              ></a>
+              <a
+                class="btn btn-social-icon btn-facebook"
+                href="http://www.facebook.com/profile.php?id="
+                ><i class="fa fa-facebook fa-lg"></i
+              ></a>
+              <a
+                class="btn btn-social-icon btn-linkedin"
+                href="http://www.linkedin.com/in/"
+                ><i class="fa fa-linkedin fa-lg"></i
+              ></a>
+              <a
+                class="btn btn-social-icon btn-twitter"
+                href="http://twitter.com/"
+                ><i class="fa fa-twitter fa-lg"></i
+              ></a>
+              <a
+                class="btn btn-social-icon btn-youtube"
+                href="http://youtube.com/"
+                ><i class="fa fa-youtube fa-lg"></i
+              ></a>
+              <a class="btn btn-social-icon" href="mailto:"
+                ><i class="fa fa-envelope fa-lg"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <!--"horizontally" aligns content in center-->
+          <div class="col-auto">
+            <p>© Book Store</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
