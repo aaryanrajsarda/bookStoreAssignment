@@ -56,15 +56,76 @@
               >
             </li>
           </ul>
-          <span class="navbar-text">
-            <a id="login" data-toggle="modal" data-target="#loginModal">
-              <span class="fa fa-sign-in"></span>
-              Login
-            </a>
+          <span class="navbar-text"><p id="welcome"></p></span>
+          <span class="navbar-text p-2" id="register-text">
+            <a id="register" data-toggle="modal" data-target="#registerModal"
+              ><span class="fa fa-user-plus"></span>Register</a
+            ></span
+          >
           </span>
+          <span class="navbar-text ml-2 p-2" id="login-logout">
+            <a id="login" data-toggle="modal" data-target="#loginModal"
+              ><span class="fa fa-sign-in"></span>Login</a
+            ></span
+          >
         </div>
       </div>
     </nav>
+
+    <div id="registerModal" class="modal fade" role="dialog">
+      <div class="modal-dialog modal-lg" role="content">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Register</h4>
+            <button type="button" class="close" data-dismiss="modal">
+              &times;
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-row">
+                <div class="form-group col-sm-4">
+                  <label class="sr-only" for="username">Username</label>
+                  <input
+                    type="text"
+                    class="form-control form-control-sm mr-1"
+                    id="usernameRegister"
+                    placeholder="Set username"
+                  />
+                </div>
+                <div class="form-group col-sm-4">
+                  <label class="sr-only" for="password">Password</label>
+                  <input
+                    type="password"
+                    class="form-control form-control-sm mr-1"
+                    id="passwordRegister"
+                    placeholder="Set Password"
+                  />
+                </div>
+              </div>
+              <div class="form-row">
+                <button
+                  type="button"
+                  class="btn btn-secondary btn-sm ml-auto"
+                  data-dismiss="modal"
+                >
+                  Cancel
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-primary btn-sm ml-1"
+                  id="register-button"
+                  data-dismiss="modal"
+                >
+                  Register
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
 
     <div id="loginModal" class="modal fade" role="dialog">
       <div class="modal-dialog modal-lg" role="content">
@@ -112,9 +173,10 @@
                   Cancel
                 </button>
                 <button
-                  type="submit"
+                  type="button"
                   class="btn btn-primary btn-sm ml-1"
-                  id="sign-in"
+                  id="sign-in-button"
+                  data-dismiss="modal"
                 >
                   Sign in
                 </button>
@@ -258,7 +320,7 @@
               <span>Harper Lee</span><br />
               <span class="text-success font-weight-bold">Rs. 500</span>
               <span
-                ><i class="fa fa-plus-circle fa-lg add-to-cart float-right"></i
+                ><i class="fa fa-plus-circle fa-lg add-to-cart float-right" id="47"></i
               ></span>
             </div>
           </li>
@@ -275,7 +337,7 @@
               <span>Ray Bradbury</span><br />
               <span class="text-success font-weight-bold">Rs. 350</span>
               <span
-                ><i class="fa fa-plus-circle fa-lg add-to-cart float-right"></i
+                ><i class="fa fa-plus-circle fa-lg add-to-cart float-right" id="21"></i
               ></span>
             </div>
           </li>
@@ -292,7 +354,7 @@
               <span>Stephen King</span><br />
               <span class="text-success font-weight-bold">Rs. 650</span>
               <span
-                ><i class="fa fa-plus-circle fa-lg add-to-cart float-right"></i
+                ><i class="fa fa-plus-circle fa-lg add-to-cart float-right" id="17"></i
               ></span>
             </div>
           </li>
@@ -309,7 +371,7 @@
               <span>Haruki Murakami</span><br />
               <span class="text-success font-weight-bold">Rs. 850</span>
               <span
-                ><i class="fa fa-plus-circle fa-lg add-to-cart float-right"></i
+                ><i class="fa fa-plus-circle fa-lg add-to-cart float-right" id="26"></i
               ></span>
             </div>
           </li>
@@ -328,7 +390,7 @@
               <span>Amish Tripathi</span><br />
               <span class="text-success font-weight-bold">Rs. 300</span>
               <span
-                ><i class="fa fa-plus-circle fa-lg add-to-cart float-right"></i
+                ><i class="fa fa-plus-circle fa-lg add-to-cart float-right" id="8"></i
               ></span>
             </div>
           </li>
@@ -345,7 +407,7 @@
               <span>J K Rowling</span><br />
               <span class="text-success font-weight-bold">Rs. 900</span>
               <span
-                ><i class="fa fa-plus-circle fa-lg float-right add-to-cart"></i
+                ><i class="fa fa-plus-circle fa-lg float-right add-to-cart" id="16"></i
               ></span>
             </div>
           </li>
@@ -564,6 +626,11 @@
       src="./node_modules/bootstrap/dist/js/bootstrap.min.js"
     ></script>
     <script src="./catalogue.js"></script>
+    <script src="./shoppingBag.js"></script>
     <script src="./index.js"></script>
+    <script src="./user.js"></script>
+    <script src="./register.js"></script>
+    <script src="./login.js"></script>
+    <script src="./cart.js"></script>
   </body>
 </html>
