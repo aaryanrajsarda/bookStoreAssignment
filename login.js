@@ -8,6 +8,7 @@ signInButton.addEventListener("click", () =>
 );
 
 function login(username, password) {
+  window.sessionStorage.setItem("username", username);
   hi.innerHTML = "Welcome " + username + "!";
   registerLogo.remove();
   signIn.remove();

@@ -118,3 +118,13 @@ li {
   margin-top: 1rem;
   font-weight: 700;
 }
+
+.cart-img {
+  height: 60%;
+  width: 60%;
+}
+
+.bg {
+  background-image: url(./images/book-store.jpg);
+  background-size: cover;
+}

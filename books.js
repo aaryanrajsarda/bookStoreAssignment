@@ -7,6 +7,7 @@ const pageTitle = document.querySelector(".page-title");
 //event listeners
 bookSearch.addEventListener("keyup", searchForBooks);
 readURL();
+
 //read URL
 function readURL() {
   if (window.location.search == "") {
@@ -41,30 +42,6 @@ function readURL() {
     currentPage.innerHTML = genre;
     pageTitle.innerHTML = genre;
     catalogueDisplay(genresToDisplay);
-  }
-}
-
-//catalogue display
-function catalogueDisplay(books) {
-  for (
-    let i = 0, ctr = 0;
-    i < Math.ceil(books.length / 6);
-    i = i + 1, ctr = ctr + 6
-  ) {
-    var bookList = document.createElement("ul");
-    bookList.classList.add("row", "row-content", "align-items-center");
-    bookList.id = "row-" + String(i + 1);
-    booksContainer.appendChild(bookList);
-    for (let j = ctr; j < ctr + 6; j++) {
-      var book = books[j];
-      var bookListItem = document.createElement("li");
-      bookListItem.classList.add("col-6", "col-md-2", "books-catalogue-div");
-      bookList.appendChild(bookListItem);
-      bookListItem.innerHTML = `<div class="books-catalogue-img-div"><img src="${book.image}" alt="${book.title}" class="img-thumbnail img-fluid"/></div><div class="books-catalogue-details"><span class="font-weight-bold">${book.title}</span><br /><span>${book.author}</span><br /><span class="text-success font-weight-bold">Rs. ${book.price}</span><span><i class="fa fa-plus-circle fa-lg add-to-cart float-right" id="${book.id}"></i></span></div>`;
-      if (j === books.length - 1) {
-        break;
-      }
-    }
   }
 }
 
@@ -116,4 +93,28 @@ function searchForBooks(event) {
   );
 
   catalogueDisplay(booksToDisplay);
+}
+
+//catalogue display
+function catalogueDisplay(books) {
+  for (
+    let i = 0, ctr = 0;
+    i < Math.ceil(books.length / 6);
+    i = i + 1, ctr = ctr + 6
+  ) {
+    var bookList = document.createElement("ul");
+    bookList.classList.add("row", "row-content", "align-items-center");
+    bookList.id = "row-" + String(i + 1);
+    booksContainer.appendChild(bookList);
+    for (let j = ctr; j < ctr + 6; j++) {
+      var book = books[j];
+      var bookListItem = document.createElement("li");
+      bookListItem.classList.add("col-6", "col-md-2", "books-catalogue-div");
+      bookList.appendChild(bookListItem);
+      bookListItem.innerHTML = `<div class="books-catalogue-img-div"><img src="${book.image}" alt="${book.title}" class="img-thumbnail img-fluid"/></div><div class="books-catalogue-details"><span class="font-weight-bold">${book.title}</span><br /><span>${book.author}</span><br /><span class="text-success font-weight-bold">Rs. ${book.price}</span><span><i class="fa fa-plus-circle fa-lg add-to-cart float-right" id="${book.id}"></i></span></div>`;
+      if (j === books.length - 1) {
+        break;
+      }
+    }
+  }
 }

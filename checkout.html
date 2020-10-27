@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout</title>
+    <link
+      rel="stylesheet"
+      href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./node_modules/bootstrap-social/bootstrap-social.css"
+    />
+    <link
+      rel="stylesheet"
+      href="node_modules/font-awesome/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body class="bg">
+    <div class="modal" role="dialog" id="checkoutModal">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Checkout</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="nameOnCreditCard">Name as on Credit Card</label>
+                <input
+                  type="text"
+                  name="nameOnCreditCard"
+                  id="nameOnCreditCard"
+                  class="form-control"
+                />
+              </div>
+              <div class="form-group">
+                <label for="paymentCard">Card Type</label>
+                <select
+                  name="paymentCard"
+                  id="paymentCard"
+                  class="form-control"
+                >
+                  <option value="Master Card">Master Card</option>
+                  <option value="Master Card">VISA</option>
+                  <option value="Master Card">Rupay</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="cardNumber">Credit Card Number</label>
+                <input
+                  type="number"
+                  name="cardNumber"
+                  id="cardNumber"
+                  class="form-control"
+                />
+              </div>
+              <div class="form-group">
+                <label for="cvv">CVV</label>
+                <input
+                  type="password"
+                  name="cvv"
+                  id="cvv"
+                  class="form-control"
+                />
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-primary pay">Pay</button>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Cancel
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      type="text/javascript"
+      src="./node_modules/jquery/dist/jquery.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./node_modules/popper.js/dist/umd/popper.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./node_modules/bootstrap/dist/js/bootstrap.min.js"
+    ></script>
+    <script src="./catalogue.js"></script>
+    <script src="./shoppingBag.js"></script>
+    <script src="/checkout.js"></script>
+    <script src="./bag.js"></script>
+  </body>
+</html>
